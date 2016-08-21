@@ -12,25 +12,16 @@ import org.esfinge.aom.model.dynamic.factory.AdapterFactory;
 
 public class ValidadorTarefa1 {
 	
-	public boolean validarEntidadePessoa(IEntity pessoa) throws Exception{
-		
+	public boolean validarEntidadePessoa(IEntity pessoa) throws Exception{		
 		
 		AdapterFactory af = AdapterFactory.getInstance("AnnotationMapping.json");
-		Object javaBean = af.generate(pessoa);
-		
+		Object javaBean = af.generate(pessoa);		
 		
 		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
 		Validator validator = factory.getValidator();
 		Set<ConstraintViolation<Object>> violations = validator.validate(javaBean);
 		
 		if(violations.isEmpty()) return true;
-		
-		
-//		for(ConstraintViolation<Object> violation : violations){
-//			System.out.println(violation.getMessage());
-//		}
-//		
-		
 		
 		return false;
 	}

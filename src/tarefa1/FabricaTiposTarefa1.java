@@ -34,9 +34,11 @@ public class FabricaTiposTarefa1 {
 		
 		
 //		Pattern expressao = Pattern.compile("[0-9]{3}\\.[0-9]{3}\\.[0-9]{3}\\-[0-9]{2}");	
-		
+//		cpfPropertyType.setProperty("pattern.regexp", expressao);		
+
+		cpfPropertyType.setProperty("cpf", "");
 		cpfPropertyType.setProperty("pattern.regexp", "[0-9]{3}\\.[0-9]{3}\\.[0-9]{3}\\-[0-9]{2}");
-//		cpfPropertyType.setProperty("pattern.regexp", expressao);
+		
 		
 		
 		emailPropertyType.setProperty("email", "");
