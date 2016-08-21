@@ -13,13 +13,13 @@ public class ValidadorTarefa2 {
 		String empresa = (String) cobranca.getProperty("empresa").getValue();		
 		if(empresa == null || empresa.equals("")) return false;		
 		
-		
+
 		String cnpj = (String) cobranca.getProperty("cnpj").getValue();
 				
 		Pattern expressao = Pattern.compile("[0-9]{2}\\.[0-9]{3}\\.[0-9]{3}\\/[0-9]{4}\\-[0-9]{2}");
-        Matcher matcher = expressao.matcher(cnpj);
- 
-        if( ! matcher.find() ) return false;		
+		Matcher matcher = expressao.matcher(cnpj);
+		 
+		if( ! matcher.find() ) return false;		
 		
 		
 		String destinatario = (String) cobranca.getProperty("destinatario").getValue();		
