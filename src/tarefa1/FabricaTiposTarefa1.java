@@ -24,33 +24,16 @@ public class FabricaTiposTarefa1 {
 		GenericPropertyType nascimentoPropertyType = new GenericPropertyType("nascimento", Date.class);
 		GenericPropertyType loginPropertyType = new GenericPropertyType("login", String.class);
 		
-		
-		
 		nomePropertyType.setProperty("size.min", 6);
-		nomePropertyType.setProperty("size.max", 49);
-		
+		nomePropertyType.setProperty("size.max", 49);		
 		alturaPropertyType.setProperty("min", 1);
-		alturaPropertyType.setProperty("max", 215);
-		
-		
-//		Pattern expressao = Pattern.compile("[0-9]{3}\\.[0-9]{3}\\.[0-9]{3}\\-[0-9]{2}");	
-//		cpfPropertyType.setProperty("pattern.regexp", expressao);		
-
-		cpfPropertyType.setProperty("cpf", "");
-		cpfPropertyType.setProperty("pattern.regexp", "[0-9]{3}\\.[0-9]{3}\\.[0-9]{3}\\-[0-9]{2}");
-		
-		
-		
+		alturaPropertyType.setProperty("max", 215);	
+//		cpfPropertyType.setProperty("cpf", "");
+		cpfPropertyType.setProperty("pattern", "[0-9]{3}\\.[0-9]{3}\\.[0-9]{3}\\-[0-9]{2}");
 		emailPropertyType.setProperty("email", "");
-		profissaoPropertyType.setProperty("notempty", "");
-		
+		profissaoPropertyType.setProperty("notempty", "");		
 		nascimentoPropertyType.setProperty("past", 0);
 		loginPropertyType.setProperty("size.min", 7);
-		
-		
-		
-		
-		
 		
 		//adicionando property types no tipo de entidade
 		tipoPessoa.addPropertyType(nomePropertyType);
